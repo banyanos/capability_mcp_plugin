@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "capability-mcp-plugin"
+version = "0.0.1"
+description = "Capability MCP Compatibility Plugin for SilvaEngine"
+requires-python = ">=3.10"
+dependencies = [
+  "silvaengine-daemon>=0.0.1",
+  "mcp-protocol-plugin>=0.0.1",
+  "graphene",
+  "silvaengine-utility",
+  "silvaengine-dynamodb-base",
+  "pendulum",
+]
+
+[project.optional-dependencies]
+postgresql = ["SQLAlchemy>=1.4", "psycopg2-binary>=2.9"]
+dev = ["pytest>=7.0", "ruff"]
+
+[tool.setuptools.packages.find]
+include = ["capability_mcp_plugin*"]
