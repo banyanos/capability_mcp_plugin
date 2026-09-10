@@ -1,0 +1,1 @@
+# capability_mcp_plugin
